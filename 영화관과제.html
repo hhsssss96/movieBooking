@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화관 과제</title>
+
+    <style>
+         .container {
+   width: 960px;
+   margin : 0 auto;
+ }
+ 
+ .navi{
+   width:960px;
+   height:60px;
+   margin: 0 auto;
+   padding-bottom:10px;
+   border-bottom:2px solid #ccc;
+ }
+ .navi ul{
+   list-style: none;
+   padding-top:10px;
+   padding-bottom:5px;
+   padding-left: 200px;
+   
+ }
+ 
+ .navi ul li {
+   float:left;
+   width:150px;
+   padding:10px;  
+   margin: 3px;
+ }
+ .navi a:link, .navi a:visited{
+    /* display:block; */
+   font-size:15px bold;
+   /* color:#000; */
+   padding: 10px;
+   text-decoration: none;  /* 밑줄 없앰 */
+   /* text-align: center; */
+ }
+ .navi a:hover,  .navi a:focus {
+   background-color:#222;  /* 배경 색 */
+   color:#fff;  /* 글자 색 */
+   border-radius: 25%;
+
+ }
+ .navi a:active {
+   background-color:#f00;  /* 배경 색 */
+ }
+ .content{
+  margin: 30px auto;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #222;
+  border-radius: 5px;
+  
+ }
+ #intro:target{
+  background-color: #0069e0;
+  color: #fff;
+ }
+ #movie:target{
+  background-color: #ff9844;
+ }
+ #booking:target{
+  background-color: #fff8dc;
+ }
+
+
+
+
+
+        table {
+            border-collapse: collapse;
+            display: block;
+        }
+        td {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ccc;
+            text-align: center;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            /* border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px; */
+            display: inline-block;
+            
+        }
+        td:nth-child(2),td:nth-child(6){
+          margin-right: 20px;
+        }
+        #seatnum{
+            background-color: aquamarine;
+            width: 250px;
+
+        }
+
+        #submit{
+            color: red;
+            background-color: black;
+        }
+
+        #screen{
+            border: 2px solid;
+            width: 150px;
+            text-align: center;
+            background-color: red;
+            padding: 10px;
+            border-radius: 30%;
+            
+        }
+
+        #bg{
+          background-color: transparent;
+          margin-left: auto;
+          margin-right: auto;
+        }
+       
+       
+    </style>
+
+</head>
+<body>
+
+    
+    <div id="container" class="container">
+    <nav class="navi">
+        <ul>
+          <li><a href="메뉴바링크.html">이용 안내</a></li>
+          <li><a href="메뉴바링크.html">영화 소개</a></li>
+          <li><a href="메뉴바링크.html">예약방법 및 요금</a></li>
+          <li><a href="#메뉴바링크.html">예약하기</a></li>
+        </ul>
+      </nav> 
+
+
+    <div id="bg">
+    <h2>영화관 좌석예약</h2>
+
+    
+
+    
+    <form>
+        <label for="cars">Choose:</label>
+        <select id="cars" name="cars">
+          <option value="1관">1관</option>
+          <option value="2관">2관</option>
+          <option value="3관">3관</option>
+          <option value="Imax">Imax</option>
+        </select>
+        <input type="submit" value="Submit" id="submit">
+      </form>
+      <br><br><br><br>
+    
+      <div id="screen">Screen</div>
+      <br>
+      
+      <div id="seats"></div>
+    <div id="seatnum">booked seat <span>예약되었습니다.</span> </div>
+    
+  </div>
+        <script>
+
+
+
+
+
+            //         //열과 행을 정하고 시작
+            // let row = 6
+            // let col = 8
+
+            // //테이블 만들기
+            // let content = document.querySelector("#container"); 
+            // let table = document.createElement("table");
+
+
+            // let booking = (event,i,j) => {
+            //     let number
+            //     let result = document.querySelector('#seatnum') //#chose라는 ID 내용을 담을 결과 영역
+            //     event.target.style.backgroundColor = "black" //스타일 변경하는것
+            //     event.target.style.color = "#fff" //스타일 변경하는것
+            //     result.textContent += event.target.textContent + ', '//선택된 셀(td)의 내용을 넣어라
+            // } //event.target = td★★★★★
+
+            // for(let i=0; i<row; i++){//tr생성
+            //     let tr = document.createElement("tr"); 
+            //     for(let j=0; j<col; j++){ //td생성
+            //         let td = document.createElement("td");     
+            //         let text = document.createTextNode(`${8*i+j+1}`);
+            //         td.appendChild(text)
+            //         tr.appendChild(td);
+            //         td.addEventListener('click', (event)=>booking(event, i, j))
+            //     }
+            //         table.appendChild(tr);
+            //     }
+            // content.appendChild(table);
+
+
+
+
+            let row = 6;
+            let col = 8;
+            let seatList = []
+            let table = document.createElement("table");
+            let seatnum = document.getElementById('seatnum')
+            let seats = document.getElementById('seats') 
+            let note = "예약 된 좌석: "
+            
+            // console.log(seat.innerHTML)
+
+            // seat.innerHTML = ""
+            
+
+            let booking = function(event, i, j){
+                // console.log(event.target.style.backgroundColor)
+                let num = col*i+j+1 
+                // console.log(num)
+                if(event.target.style.backgroundColor==="white"){
+                    event.target.style.backgroundColor = "black"
+                    seatList.push(num)
+                   
+                    seatnum.innerHTML = note+ seatList.join(",")
+                   
+                }else{
+
+                    if(seatList.indexOf(num)!==-1) //그 좌석이 없을경우 -1찍고 있으면 idx번호 넘겨줌
+                    {
+                        console.log(event.target.style.backgroundColor)
+                         event.target.style.backgroundColor="white"
+                        let idx = seatList.indexOf(num)
+                        seatList.splice(idx,1)
+                    
+                        seatnum.innerHTML = note+ seatList.join(",")
+                    }
+                    else{
+                        event.target.style.backgroundColor="white"
+                        seatnum.innerHTML = note+ seatList.join(",")
+                    }
+
+                }
+                // console.log(seatList)
+
+                
+                // seat.innerHTML = event.target.innerHTML////  seat넘버넣을때
+
+            }
+
+
+            for(let i=0; i<row; i++){
+                let tr = document.createElement('tr');
+                for(let j=0; j<col; j++){
+                    let td = document.createElement('td')
+
+                    
+
+                    let text = document.createTextNode(`${8*i+j+1}`);
+                    td.appendChild(text)
+                    tr.appendChild(td)
+                    td.addEventListener('click', (event)=>booking(event, i, j))
+
+                    // td.addEventListener('click',(event)=>booking(event, i,j))
+                    
+                }
+                
+                
+                table.appendChild(tr)
+            
+            }
+            seats.appendChild(table)
+   
+
+        </script>
+        </div>
+    </div>
+</body>
+</html>

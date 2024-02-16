@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌석예약시스템</title>
+    <!-- <link rel="stylesheet" href="book.css"> -->
+    <script defer src="booking.js"></script>
+    <link rel="stylesheet" href="booking.css">
+
+</head>
+<style>
+ 
+</style>
+
+<body>
+    <div id="ccontainer">
+    <div id="container">
+        <div class="movieContainer">
+            <label for="moive">Pick a Movie</label>
+            <select name="pickMovie" id="movie">
+                <option class="price" value="0">  영화를 선택하세요.</option>
+                <option class="price" value="10">  Avengers ($10)</option>
+                <option class="price" value="12">  Joker ($12)</option>
+                <option class="price" value="8">  Toy Story ($8)</option>
+                <option class="price" value="0">Lion King($9)Sold Out</option>
+            </select>
+        </div>
+
+        <div id="ex">
+            <ul>
+                <li id="fst_li"><span id="avs"></span>Available Seat</li>
+                <li id="sec_li"><span id="ocs"></span>Occupied Seat</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="seatContainer">
+        <div class="screen">screen</div>
+    </div>
+
+    <div id="btm">
+        <p>
+            You have selected <span class="hlight"> _ </span>
+            seats for a price of $<span class="hlight"> _ </span>
+        </p>
+
+    </div>
+</div>
+</body>
+</html>

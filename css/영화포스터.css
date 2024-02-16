@@ -1,0 +1,72 @@
+body{
+    margin-top: 150px;
+}
+
+#container{
+    width: 1000px;
+    height:600px;
+    margin: 20px auto;
+    /* background-color: rgba(0,0,0,0.4); */
+   
+}
+
+h1{
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+    border: 7px solid darkred;
+    border-radius: 20px;
+
+    margin-bottom: 40px;
+    
+}
+/*각 덩어리 */
+#container ul{
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin-right: 40px;
+ }
+ 
+
+
+/* 포스터사진 */
+.poster{
+    width: 250px;
+    height:380px;
+    border: 8px darkred solid;
+    border-radius: 8px;
+    position: relative;
+
+}
+
+
+
+
+
+
+/* 영화소개글 */
+.info{
+    width: 230px;
+    margin-left: 10px;
+    position: absolute;
+    top: 400px;
+    color: white;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.3);
+
+}
+
+
+/* 마우스 hover */
+li:hover .info{
+    opacity: 1;
+    transform: translateY(-100PX);
+    /* transform: scale(0.8); */
+}

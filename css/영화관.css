@@ -1,0 +1,81 @@
+
+*{
+    background-color:transparent;
+
+}
+ .container {
+   width: 960px;
+   margin : 0 auto;
+   background-color:transparent;
+ }
+ 
+ .navi{
+   width:960px;
+   height:60px;
+   padding-bottom:10px;
+   border-bottom:2px solid #ccc;
+   
+ }
+ .navi ul{
+   list-style: none;
+   padding-top:10px;
+   padding-bottom:5px;
+   display: flex;
+   justify-content: space-evenly;
+   flex-direction: row;
+
+  
+ }
+
+ .navi ul li {
+   /* float:left; */
+   width:150px;
+   padding:10px; 
+ 
+ }
+ .navi a:link, .navi a:visited{
+    /* display:block; */
+   font-size:15px bold;
+   /* color:#000; */
+   padding: 10px;
+   text-decoration: none;  /* 밑줄 없앰 */
+   /* text-align: center; */
+ }
+ .navi a:hover,  .navi a:focus {
+   background-color:#222;  /* 배경 색 */
+   color:#fff;  /* 글자 색 */
+   border-radius: 25%;
+ }
+
+ 
+ .navi a:active {
+   background-color:purple;  /* 배경 색 */
+ }
+
+
+ .content{
+  /* background-image: url(movie.webp); */
+  opacity: 0.5;
+  margin: 30px auto;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #222;
+  border-radius: 5px;
+ }
+ #intro:hover{
+  background-color: #0069e0;
+  
+ }
+ #movie:hover{
+  background-color: #ff9844;
+ }
+ #booking:hover{
+  background-color: #fff8dc;
+ }
+ #register:hover{
+  background-color: palevioletred;
+ }
+#chair{
+  width:960px;
+  height:400px;
+}

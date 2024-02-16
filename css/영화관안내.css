@@ -1,0 +1,337 @@
+/* #header{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    width: 1000px;
+    height: 80px;
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+body{
+    margin-top: 100px;
+}
+
+#menu{
+    width: calc(100% - 200px);
+    display: flex;
+    justify-content: center;
+}
+#menu_ul{
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+
+    /* width: calc(100%-200); */
+    height: 50px;
+}
+#menu_ul li{
+    list-style: none;
+    font-size: 1.3rem ;
+    font-weight: bold;
+}
+#menu_ul li a{
+    list-style: none;
+    text-decoration: none;
+} 
+#menu_ul li a:hover{
+    color: yellowgreen;
+}
+/* 
+========================== 바디======================================= */
+
+#main{
+box-sizing: border-box;
+margin: 50px auto;
+
+padding: 0;
+border: 5px solid #ccc;
+border-radius: 3%;
+width: 800px;
+
+display: flex;
+flex-direction:  column;
+justify-content: center;
+align-items: center;
+}
+
+
+
+#top{
+width: 80%;
+border-bottom: 3px ;
+border-style: dotted;
+border-top: transparent;
+border-left: transparent;
+border-right: transparent;
+}
+#hd{
+padding: 10px;
+margin-top: 25px;
+background-color: purple;
+color: white;
+text-align: center;
+font-size: 1.5rem;
+border-radius: 20px;
+font-weight: bold;
+}
+
+#bd{
+margin-top: 10px;
+margin-bottom: 25px;
+text-align: center;
+
+}
+#hlight{
+color: skyblue;
+font-weight: bolder;
+text-decoration: underline;
+}
+#hhd{
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    padding-top: 20px;
+    background-color: lightpink;
+    margin-top: 5px;
+}
+#one{
+color: red;
+font-weight: bolder;
+}
+#two{
+color: skyblue;
+font-weight: bolder;
+}
+
+#three{
+color: red;
+font-weight: bolder;
+font-style: italic;
+}
+#end{
+text-align: right;
+color: darkgray;
+}
+#map{
+    width: 600px;
+}
+
+#downtxt{
+    margin-bottom: 40px;
+    margin-left: 30px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+*{
+    
+    background: transparent;
+ }
+ 
+ 
+ #header{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ 
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ #container{
+     width: 1000px;
+     height: 80px;
+     background-color: transparent;
+ 
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+ }
+ 
+ 
+ #logo{
+     width: 100px;
+     margin-left: 15px;
+     margin-left: 60px;
+ }
+ 
+ #logo a{
+     text-decoration: none;
+ }
+ 
+ #log{
+     width: 100px;
+     height: 100px;
+     margin: auto;
+ }
+ 
+ #menu{
+     width: calc(100% - 200px);
+     display: flex;
+     justify-content: center;
+ }
+ #menu_ul{
+     width: 500px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     align-items: center;
+     background-color: white;
+     list-style: none;
+ 
+    
+     height: 50px;
+ }
+ #menu_ul li{
+     
+     list-style: none;
+     font-size: 1.3rem ;
+     font-weight: bold;
+ }
+ #menu_ul li a{
+     list-style: none;
+     text-decoration: none;
+ } 
+ #menu_ul li a:hover{
+     color: yellowgreen;
+ }
+  */
+ 
+ 
+ /* 
+ ========================== 바디======================================= */
+ 
+ /* #main{
+ box-sizing: border-box;
+ margin: 50px auto;
+ 
+ padding: 0;
+ border: 5px solid #ccc;
+ border-radius: 3%;
+ width: 800px;
+ height: 900px;
+ display: flex;
+ flex-direction:  column;
+ justify-content: center;
+ align-items: center;
+ }
+ #top{
+ width: 80%;
+ border-bottom: 3px ;
+ border-style: dotted;
+ border-top: transparent;
+ border-left: transparent;
+ border-right: transparent;
+ }
+ #hd{
+ padding: 10px;
+ margin-top: 25px;
+ background-color: purple;
+ color: white;
+ text-align: center;
+ font-size: 1.5rem;
+ border-radius: 20px;
+ }
+ 
+ #bd{
+ padding-top: 20px;
+ margin: 15px auto;
+ margin-top: 10px;
+ margin-bottom: 25px;
+ width: 500px;
+ }
+ #downtxt{
+     padding-bottom: 1050px;
+ }
+ #hlight{
+ color: skyblue;
+ font-weight: bolder;
+ text-decoration: underline;
+ }
+ #hhd{
+ width: 200px;
+ height: 30px;
+ border-radius: 15px;
+ margin-left: 10px;
+ padding-top: 10px;
+ text-align: center;
+ font-weight: bold;
+ background-color: lightpink;
+ }
+ #one{
+ color: red;
+ font-weight: bolder;
+ }
+ #two{
+ color: skyblue;
+ font-weight: bolder;
+ }
+ 
+ #three{
+ color: red;
+ font-weight: bolder;
+ font-style: italic;
+ }
+ 
+ #map{
+     width: 450px;
+     height: 300px;
+ }
+ 
+ #logo{
+     width: 70px;
+     height: 70px;
+     margin-left: 20px;
+     margin-bottom: 1px
+ } */
